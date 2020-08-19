@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  height: 45px;
+  border-bottom: 1px solid #e2e2e2;
+  align-items: center;
+  padding: 0 15px;
+	z-index: 9999;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 5px 1px;
+}
+
+.nav-left,
+.nav-right,
+.logo {
+  display: inline-block;
+}
+
+.nav-right {
+  direction: rtl;
+  padding-right: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  margin: 0 10px;
+}
+
+.button {
+  background-color: #567b95;
+  border: 1px solid #326891;
+  border-radius: 3px;
+  color: white;
+  padding: 8px 10px;
+	margin: 0 3px;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 700;  
+}
+
+.subject {
+	display: inline-block;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.content-container {
+  position: relative;
+  top: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+	font-family: 'PT serif', serif;
+	font-size: 40px;
+	color: #121212;
+	font-style: italic;
+}
+
+.content-text {
+  max-width: 640px;
+	margin: 0 auto;
+	padding: 0 20px;
+	padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+	.nav-container .nav-right .button,
+	.nav-container .nav-left .subject {
+		display: none;
+	}
+}
+
+/* images */
+
+.image-container {
+  padding-bottom: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+.image-caption {
+	font-size: 15px;
+	color: #666;
+}
+
+@media (max-width: 1200px) {
+	.image-caption {
+		padding: 0 10px;
+	}
+}
+
+.image-caption span {
+	color: #888;
+}
+
+/* ARTICLE INFO */
+.author {
+	font-size: 15px;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 700;
+}
+
+.date-social {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.date {
+	font-size: 13px;
+}
+
+.date-social .icon {
+	margin: 0 5px;
+}
+
+.social {
+	border-radius: 100%;
+	background-color: #eee;
+	padding: 3px;
+}
+
+.bookmark-icon {
+	width: 30px;
+	height: 30px;
+}
+
+/* ARTICLE TEXT */
+.content-text p {
+  margin-bottom: 20px;
+	line-height: 30px
+}
+
+h2 {
+	line-height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* CHART */
+h3 {
+	font-size: 20px;
+	font-family: 'PT Serif', serif;
+}
+
+.chart-container {
+	max-width: 945px;
+	margin: 0 auto 50px auto;
+}
+
+.chart-caption {
+	font-size: 14px;
+	font-family: 'PT Serif', serif;
+	color: #888;
+}
+
+.chart {
+  background-image: url('https://static01.nyt.com/newsgraphics/2014/03/18/theory-of-inflation/1ebaa1b972edda0f407fbaa0e010f6b50fb6792e/inflation-945.png');
+  background-size: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.chart-text {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+  padding-top: 60%;
+  font-weight: 300;
+  margin: 0 5px;
+}
+
+@media (max-width: 945px) {
+  .chart-container {
+    width: 720px;
+  }
+
+  .chart {
+		background-image: url("https://static01.nyt.com/newsgraphics/2014/03/18/theory-of-inflation/1ebaa1b972edda0f407fbaa0e010f6b50fb6792e/inflation-720.png");
+	}
+
+	.chart-text {
+		padding-top: 65%;
+	}
+}
+
+strong {
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+.line-break {
+	border-top: 1px solid #333;
+	width: 60px;
+	height: 1px;
+	margin: 15px 0;
+}
+
+.chart-author {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+.video {
+  width: 600px;
+  height: 338px;
+}
+
+.content-text .image-container .image-caption {
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.article-footer p {
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 400;
+}
+
+.button-social-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.button-social-container .button {
+	margin-left: 0;
+}
+
+
+.suggested-content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	column-gap: 30px;
+	max-width: 1200px;
+	margin: 100px auto 0 auto;
+	padding: 0 20px;
+}
+
+.black-divider {
+	border-top: 1px solid black;
+	padding-top: 20px;
+}
+
+.sidebar {
+	grid-column: 2/ 3;
+	grid-row: 1/span 2;
+}
+
+
+.sidebar h3,
+.suggested-article h3 {
+	font-size: 18px;
+	color: #121212;
+	font-family: 'PT Serif', serif;
+	font-weight: 500;
+	padding-top: 15px;
+	border-top: 1px solid #e2e2e2;
+	margin-top: 15px;
+}
+
+.suggested-article h3 {
+	border: none;
+}
+
+h4 {
+	font-size: 16px;
+	font-family: 'Libre Franklin', sans-serif;
+	padding-bottom: 20px;
+}
+
+.suggested-articles {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+}
+
+.suggested-article h3 {
+	margin-top: 0;
+	padding-top: 10px;
+}
+
+.suggested-article img {
+	margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+	.sidebar {
+		display: none;
+	}
+
+	.suggested-content {
+		display: block;
+	}
+
+	.suggested-articles {
+		display: block;
+	}
+}
+
+/* FOOTER */
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.logo {
+	width: 200px;
+}
+
+.break {
+	width: 100%;
+	height: 4px;
+	border-top: 2px solid #e2e2e2;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+h6 {
+	font-size: 13px;
+	font-family: 'Libre Franklin', sans-serif;
+	margin-bottom: 10px;
+}
+
+.subjects-container {
+	margin: 20px 0;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.subject-link {
+	display: block;
+	font-size: 14px;
+	font-family: 'Libre Franklin', sans-serif;
+	color: #000;
+	text-decoration: none;
+	padding: 3px 0;
+}
+
+.subject-link:hover {
+	text-decoration: underline;
+}
+
+.subjects-container .subjects:last-child {
+	border-left: 1px solid #e2e2e2;
+	padding-left: 15px;
+}
+
+.top-border {
+	border-top: 1px solid #e2e2e2;
+	padding-top: 15px;
+	margin-top: 15px;
+}
+
+.bottom-border {
+	border-bottom: 1px solid #e2e2e2;
+}
+.copyright {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.footer-link {
+	font-size: 12px;
+	padding: 10px 20px;
+	color: #666;
+	text-decoration: none;
+}
+
+.footer-link:hover {
+	text-decoration: underline;
+}
